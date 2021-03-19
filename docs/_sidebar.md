@@ -1,2 +1,2 @@
-- JavaScript
+- 个人简介
   - [闭包](closure.md)
