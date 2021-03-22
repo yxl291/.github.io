@@ -22,15 +22,8 @@
     <div id="app"></div>
     <script>
       window.$docsify = {
-        name: "",
-        repo: "",
-        loadSidebar: true,
-        subMaxLevel: 2,
-        coverpage: true,
-      };
-      window.$docsify = {
         // 完整配置参数
-        name: "《YXL BLOG》",
+        name: " ——《YXL BLOG》——",
         repo: "https://github.com/yxl291",
         auto2top: true,
         coverpage: true,
@@ -46,25 +39,28 @@
           nextText: "NEXT",
           crossChapter: true,
         },
+        disqus: "shortname",
       };
+    </script>
+    <!-- Docsify v4 -->
+    <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+    <!-- 引入搜索模块 -->
+    <script src="//unpkg.com/docsify/lib/plugins/search.js"></script>
+    <!-- emoji -->
+    <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
+    <!-- 评论 -->
+    <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+    <script>
       const gitalk = new Gitalk({
-        clientID: "Github Application Client ID",
-        clientSecret: "Github Application Client Secret",
-        repo: "Github repo",
-        owner: "Github repo owner",
-        admin: [
-          "Github repo collaborators, only these guys can initialize github issues",
-        ],
+        clientID: "84b48773888b306e1217",
+        clientSecret: "872cb9fa1b9ae7abf5d49fd4c10b1859792cafd5",
+        repo: ".github.io",
+        owner: 'yxl291',
+        admin: ["yxl291"],
         // facebook-like distraction free mode
         distractionFreeMode: false,
       });
     </script>
-    <!-- 引入搜索模块 -->
-    <script src="//unpkg.com/docsify/lib/plugins/search.js"></script>
-    <!-- Docsify v4 -->
-    <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
-    <!-- 评论 -->
-    <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
   </body>
 </html>
