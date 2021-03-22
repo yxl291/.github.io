@@ -1,5 +1,4 @@
-- 🔸HTML
-  - [面试题汇总](htmlAggregate/html)
+- [🔸HTML](htmlAggregate/html)
 - 🔸CSS
 - 🔸JavaScript
 - 🔸Vue
