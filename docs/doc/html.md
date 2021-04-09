@@ -50,4 +50,66 @@ DOCTYPE是HTML5中一种标准通用标记语言的文档类型声明，它的�
 
 - inline-block:将对象设置为inline对象，但对象的内容作为block对象呈现，之后的内联对象会被排列在同一行内。
 
+>#### script标签中defer和async的区别
+
+如果没有defer或async属性，浏览器会立即加载并执行相应的脚本。也就是说在渲染script标签之后的文档之前，不等待后续加载的文档元素，读到就开始加载和执行，这样就会阻塞后续文档的加载。
+defer 和 async属性都是去异步加载外部的JS脚本文件，它们都不会阻塞页面的解析，其区别如下：
+
+- 多个带async属性的标签，不能保证加载的顺序；多个带defer属性的标签，按照加载顺序执行。
+
+- async属性，表示后续文档的加载和渲染与js脚本的加载和执行是并行进行的，即异步执行；有了defer属性，加载后续文档的过程和js脚本的加载(此时仅加载不执行)是并行进行的(异步)，js脚本的执行需要等到文档所有元素解析完成之后，DOMContentLoaded事件触发执行之前。
+
+>#### 常⽤的meta标签有哪些
+
+- charset，用来描述HTML文档的编码类型
+    - `<meta charset="UTF-8" >`
+
+- keywords，页面关键词 
+    - `<meta name="keywords" content="关键词" />`
+
+- description，页面描述
+    - `<meta name="description" content="想要描述的内容" />`
+
+- refresh，页面重定向和刷新 
+    - `<meta http-equiv="refresh" content="0;url=" />`
+
+- viewport，适配移动端，开发人员可以控制视口的大小和比例 
+    - `<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">`
+
+>#### HTML5有哪些更新
+
+- 新增语义化标签：nav、header、footer、aside、section、article
+
+- 音频、视频标签：audio、video
+
+- 数据存储：localStorage、sessionStorage
+
+- canvas（画布）、Geolocation（地理定位）、websocket（通信协议）
+
+- input标签新增属性：placeholder、autocomplete、autofocus、required
+
+- history API：go、forward、back、pushstate
+
+>#### 行内元素有哪些？块级元素有哪些？ 空(void)元素有那些？
+
+- 行内元素有：`a b span img input select strong`
+
+- 块级元素有：`div ul ol li dl dt dd h1 h2 h3 h4 h5 h6 p`
+
+- 常见的空元素（标签内没有内容的 HTML 标签被称为空元素。空元素是在开始标签中关闭的。）: `<br> <hr> <img> <input> <link> <meta>`
+
+>#### iframe 有哪些优点和缺点？
+
+- **优点**
+    - 用来加载速度较慢的内容（如广告）
+    - 可以使脚本可以并行下载
+    - 可以实现跨子域通信
+
+- **缺点**
+    - iframe 会阻塞主页面的 onload 事件
+    - 无法被一些搜索引擎索识别
+    - 会产生很多页面，不容易管理
+
+
+
 
