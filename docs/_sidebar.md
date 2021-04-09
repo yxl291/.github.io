@@ -1,4 +1,5 @@
-- [🔸HTML](htmlAggregate/html)
-- 🔸CSS
-- 🔸JavaScript
-- 🔸Vue
+- [🔸 **HTML**](doc/html)
+- 🔸 **CSS**
+- 🔸 **JavaScript**
+- [🔸 **Vue**](doc/vue)
+- 🔸 **Es6**
