@@ -60,3 +60,94 @@ DOM的变化影响到了预算内宿的几何属性比如宽高，浏览器重�
 CSS3 弹性盒（ Flexible Box 或 flexbox），是一种当页面需要适应不同的屏幕大小以及设备类型时确保元素拥有恰当的行为的布局方式。
 
 引入弹性盒布局模型的目的是提供一种更加有效的方式来对一个容器中的子元素进行排列、对齐和分配空白空间。
+
+>#### 行内元素与块级元素互相转换
+
+- display:inline; 转换为行内元素
+- display:inline-block;转换为行内块元素
+- display:block;转换为块元素
+
+>#### link和@import区别
+
+- link兼容性好
+- 两者加载顺序不一样 先加载link
+
+>#### css的盒子模型有哪些？
+- **标准盒子模型**:margin、border、padding、content
+- **IE盒子模型**:margin、content、(border + padding + content)
+
+*通过css如何转换盒子模型*
+- box-sizing:content-box;**标准盒子模型**
+- box-sizing:border-box;**IE盒子模型**
+
+>#### line-height和height区别
+
+- line-height是每一行文字的高，换行后盒子高度会增大（行数*行高）；
+- height是一个死值，就是这个盒子的高度；
+
+>#### css的选择符有哪些？哪些属性可以继承？
+
+- css选择符
+  - 通配（*）
+  - id选择器（#）
+  - 类选择器（.）
+  - 标签选择器（div、p、h1）
+  - 相邻选择器（+）
+  - 后代选择器（ul li）*ul li + li{} //排除第一个li*
+  - 子元素选择器（>）
+  - 属性选择器（a[href]）
+- css属性那些可与继承:
+  - **文字系列**：font-size、color、line-height、text-align...
+  *不可继承属性：border、padding、margin...*
+
+>#### css的优先级算法如何计算？
+
+- **优先级比较：** !important > 内联样式 > id > class > 标签 > 通配
+- **css权重计算**
+    - 内联样式：1000
+    - id选择器：100
+    - 类选择器：10
+    - 标签&伪元素选择器：1
+    - 通配、>、+：0
+
+>#### css画个三角形？
+
+- **用边框画**  
+`border-left:100px solid #ccc;`  
+`border-top:100px solid transparent;`  
+`border-right:100px solid transparent;`  
+`border-bottom:100px solid transparent;`
+
+>#### 一个盒子不给宽高怎么垂直居中
+
+- 方式一：  
+    `{`  
+        `display:flex;  `    
+	    `justify-content:center;  `    
+	    `align-items:center;   `     
+    `}`
+
+- 方式二：  
+    `{`  
+       `position:absolute; `  
+	   `top:50%; `  
+	   `left:50;`  
+	   `transform:translate(-50%,-50%);`     
+    `}`
+>#### display有哪些值
+
+-  **none** 隐藏元素
+-  **inline** 转换为内联元素
+-  **block** 转换为块元素
+-  **inline-block** 转换为行内块元素
+
+>#### 对BFC规范（块级格式化上下文）的理解
+
+- **BFC就是页面上一个隔离的独立容器，容器里面的子元素不会影响到外部的元素；**
+    - **1.了解BFC** : 块级格式化上下文；
+    - **2.BFC原则** : 如果一个元素具有BFC，那么内部元素怎么样都不会影响外面元素；
+    - **3.触发BFC** :   
+        float的值为none；
+        overflow的值为非visible；  
+        display的值为：inline-block、table-cell...  
+        position的值为：absoute、fixed  
