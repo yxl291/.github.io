@@ -151,3 +151,60 @@ CSS3 弹性盒（ Flexible Box 或 flexbox），是一种当页面需要适应�
         overflow的值为非visible；  
         display的值为：inline-block、table-cell...  
         position的值为：absoute、fixed  
+
+>#### 清除浮动有哪些方式？
+
+- 触发BFC
+- 多创建一个盒子，添加样式：clear：both
+- after方式   
+`ul:after{`  
+`content:'';`  
+`dispaly:block;`  
+`clear:both;`  
+`}`
+
+>#### position有哪些值？分别根据什么定位的？
+
+- **static** [默认]没有定位。
+- **fixed** 固定定位，根据浏览器窗口定位。
+- **relative** 相对于自身定位，不脱离文档流。
+- **absolute** 相当于第一个有relative的父元素，脱离文档流。
+    - relative和absolute区别  
+         1. relative不脱离文档流，absolute脱离文档流。
+         2. relative相对于自身、absolute相对于第一个有relative的父元素。
+         3. relative如果有top、left、bottom、right，只有left和top生效。absolute都会生效
+
+>#### 双飞翼布局实现
+    - [布局界面]: "../html/leftAndRightContainer.html"
+
+>#### 什么是reset.css?
+- reset.css 是一个css样式文件，是一个重置样式库。
+- Normalize.css为了增强跨浏览器渲染的一致性，一个css重置样式库。
+
+>#### css sprite（雪碧图）是什么？有什么优缺点？
+- 把多个小图标合成一个大图标
+- 优缺点
+    - 优点：减少了http请求的次数，提升了性能； 
+    - 缺点：维护比较差（例如图片位置变化，宽高修改）； 
+
+>#### display:none;和visibility:hidden;的区别？
+- 占用位置区别
+    - **display:none;** 不占用位置
+    - **visibility:hidden;** 虽然隐藏了，但是占用位置
+- 重制和回流的问题
+    - **display:none;** 还会产生一次回流
+    - **visibility:hidden;** 产生重绘
+
+**产生回流一定会造成重绘，但是重绘不一定会造成回流**
+
+1. 产生回流的情况：改变元素的位置、显示隐藏元素；
+2. 产生重绘的情况：样式改变（背景色、字体颜色）
+
+>opacity和rgba的区别？
+
+- **opacity** 取值0-1，0透明，1不透明
+- **rgba** r:red; g:green; b:blue; a:透明度；取值可以正整数和百分数；
+
+ **区别：**
+
+ opacity会继承父元素的opacity属性，rgba不会；
