@@ -208,3 +208,8 @@ CSS3 弹性盒（ Flexible Box 或 flexbox），是一种当页面需要适应�
  **区别：**
 
  opacity会继承父元素的opacity属性，rgba不会；
+
+ >#### px、em、rem区别
+ - px:固定的大小，设置后无法适应页面大小变化
+ - em:相对长度单位，em相对于父元素
+ - rem:相对长度单位，rem相对于根元素

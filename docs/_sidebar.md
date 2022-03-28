@@ -4,4 +4,8 @@
 - [🔸 **Vue**](doc/vueAll)
 - [🔸 **Vue原理**](doc/vue)
 - [🔸 **面试重点**](doc/面试重点)
+- [🔸 **TypeScript**](doc/react/ts.md)
+- [🔸 **React脚手架**](doc/react/React%E8%84%9A%E6%89%8B%E6%9E%B6.md)
+- [🔸 **React类组件**](doc/react/React%20%E7%B1%BB%E7%BB%84%E4%BB%B6.md)
+- [🔸 **React函数组件和高阶指引**](doc/react/React%20%E5%87%BD%E6%95%B0%E7%BB%84%E4%BB%B6%20%E5%92%8C%20%E9%AB%98%E9%98%B6%E6%8C%87%E5%BC%95.md)
 - 🔸 **Es6**

@@ -123,3 +123,5 @@ Call和apply作用一摸一样，只是传参的形式有区别
 - 方式二：原型链继承 Child.prototype = new Parent();
 - 方式三：构造函数继承；
 - 方式四：组合式继承；
+
+> #### rem和em区别
